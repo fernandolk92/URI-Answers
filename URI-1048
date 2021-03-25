@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+    Scanner teclado = new Scanner(System.in);
+
+    double salario, aumento, novosalario;
+    String porcentagem;
+    
+    porcentagem = "";
+    novosalario = 0;
+    aumento = 0;
+    
+    salario = teclado.nextFloat();
+    
+    if (salario > 0 && salario <= 400){
+        aumento = salario * 0.15;
+        novosalario = salario + aumento;
+        porcentagem = "15 %";
+    }if (salario > 400.01 && salario <= 800){
+        aumento = salario * 0.12;
+        novosalario = salario + aumento;
+        porcentagem = "12 %";
+    }if (salario > 800.01 && salario <= 1200){
+        aumento = salario * 0.10;
+        novosalario = salario + aumento;
+        porcentagem = "10 %";
+    }if (salario > 1200.01 && salario <= 2000){
+        aumento = salario * 0.07;
+        novosalario = salario + aumento;
+        porcentagem = "7 %";
+    }if (salario > 2000.01){
+        aumento = salario * 0.04;
+        novosalario = salario + aumento;   
+        porcentagem = "4 %";
+    }
+    System.out.printf("Novo salario: %.2f\n", + novosalario);
+    System.out.printf("Reajuste ganho: %.2f\n", + aumento);
+    System.out.println("Em percentual: " + porcentagem);
+    }
+}
