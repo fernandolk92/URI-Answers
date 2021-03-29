@@ -1,0 +1,38 @@
+import java.io.IOException;
+import java.util.*;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+    
+    Scanner teclado = new Scanner(System.in);
+    
+    float n1, n2, n3, n4, n5, n6;
+    int x;
+    
+    n1 = teclado.nextFloat();
+    n2 = teclado.nextFloat();
+    n3 = teclado.nextFloat();
+    n4 = teclado.nextFloat();
+    n5 = teclado.nextFloat();
+    n6 = teclado.nextFloat();
+    x=0;
+    
+    if(n1>0){
+        x++;
+    }if(n2>0){
+        x++;
+    }if(n3>0){
+        x++;
+    }if(n4>0){
+        x++;
+    }if(n5>0){
+        x++;
+    }if(n6>0){
+        x++;
+    }
+    System.out.println(x + " valores positivos");
+    
+    }
+ 
+}
